@@ -1,0 +1,188 @@
+.form {
+	width: 400px;
+	max-width: 100%;
+	padding: 65px 20px 15px 20px;
+	background: #ecf0f3;
+	border-radius: 40px;
+	box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__logo {
+		background: url(../../assets/logo.png) no-repeat center;
+		background-size: cover;
+		width: 85px;
+		height: 85px;
+		border-radius: 50%;
+		box-shadow: 0 0 2px #5f5f5f, 0 0 0 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #fff;
+	}
+
+	&__text {
+		background-color: #202020;
+		color: transparent;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.322);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+	}
+	&__error-message {
+		color: #cc1818;
+		font-size: 1rem;
+		margin: 8px 0;
+		padding-left: 10px;
+		font-weight: bold;
+	}
+
+	&__success-message {
+		color: #04a341;
+		font-size: 1rem;
+		margin: 8px 0;
+		padding-left: 10px;
+		font-weight: bold;
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		padding-top: 24px;
+		letter-spacing: 0.5px;
+		text-shadow: 0 0 3px #fff;
+	}
+
+	&__subtitle {
+		font-size: 1rem;
+		padding-top: 5px;
+		letter-spacing: 3px;
+		font-weight: bold;
+	}
+
+	&__fields {
+		padding: 15px 0;
+		width: 100%;
+	}
+
+	&__field {
+		display: flex;
+		align-items: center;
+		margin-top: 25px;
+		border-radius: 25px;
+		padding: 0 15px;
+		box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+	}
+	&__toggle-password {
+		cursor: pointer;
+
+		&:hover {
+			transition: 0.3s ease;
+			color: #555;
+		}
+	}
+
+	&__icon {
+		box-shadow: 1px 1px 3px #cbced1, -1px -1px 3px #fff;
+	}
+
+	&__input {
+		border: none;
+		outline: none;
+		background: none;
+		font-size: 1rem;
+		color: #555;
+		padding: 15px 10px 15px 5px;
+		margin-left: 5px;
+		flex: 1;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			border: none;
+			box-shadow: 0 0 0px 1000px transparent inset;
+			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+			transition: background-color 5000s ease-in-out 0s;
+		}
+	}
+
+	&__signup {
+		margin: 20px 0;
+	}
+
+	&__btn-reg {
+		outline: none;
+		background: none;
+		border: none;
+		color: #1da88a;
+
+		&:active {
+			outline: none;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.form.darkmode {
+	background: #26292f;
+	box-shadow: 10px 10px 15px #000, -10px -10px 15px #424242;
+
+	.form__logo {
+		box-shadow: 0 0 2px #000, 0 0 0 5px #424242, 8px 8px 10px #000, -10px -10px 10px #424242;
+	}
+
+	.form__text {
+		background-color: #202020;
+		color: transparent;
+		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.685);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
+		background-clip: text;
+	}
+	.form__error-message {
+		color: #cc1818;
+		text-shadow: none;
+	}
+
+	.form__success-message {
+		color: #04a341;
+		text-shadow: none;
+	}
+
+	.form__field {
+		box-shadow: inset 8px 8px 8px #000, inset -8px -8px 8px #424242;
+	}
+	.form__toggle-password {
+		&:hover {
+			color: #918e8e;
+		}
+	}
+
+	.form__icon {
+		box-shadow: 1px 1px 3px #000, -1px -1px 3px #424242;
+		border-radius: 3px;
+	}
+
+	.form__input {
+		color: #dbd8d8;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			border: none;
+			box-shadow: 0 0 0px 1000px transparent inset;
+			-webkit-text-fill-color: #fff;
+			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+			transition: background-color 5000s ease-in-out 0s;
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.form {
+		&__btn-reg {
+			&:hover {
+				color: #2fdbb6;
+				outline: none;
+			}
+		}
+	}
+}

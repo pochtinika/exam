@@ -1,0 +1,31 @@
+.my-modal {
+	.modal-content {
+		background-color: #ecf0f3 !important;
+		color: #000;
+
+		.modal-footer {
+			.mybtn.secondary {
+				background: inherit;
+			}
+		}
+	}
+
+	.close {
+		outline: none;
+
+		&:active {
+			outline: none;
+		}
+	}
+}
+
+.my-modal.darkmode {
+	.modal-content {
+		background-color: #26292f !important;
+		color: #e7e6e6;
+	}
+
+	.close {
+		color: #e7e6e6;
+	}
+}

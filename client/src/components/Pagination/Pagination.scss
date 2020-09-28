@@ -1,0 +1,26 @@
+.my-pagination {
+	margin: 20px 0;
+	justify-content: center;
+
+	.page-item .page-link:hover {
+		background-color: #d1ebe8 !important;
+	}
+
+	.page-item.active .page-link:hover {
+		background-color: #2bbbad !important;
+	}
+}
+
+.my-pagination.darkmode {
+	.page-item .page-link {
+		color: #e7e6e6;
+	}
+
+	.page-item .page-link:hover {
+		background-color: #3b3d3d !important;
+	}
+
+	.page-item.active .page-link {
+		background-color: #408b7b !important;
+	}
+}

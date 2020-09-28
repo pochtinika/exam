@@ -1,0 +1,6 @@
+{
+	"port": 5000,
+	/*"mongoUrl": "mongodb://127.0.0.1:27017/online-shop",*/
+	"mongoUrl": "mongodb+srv://adminUser:onlineShop!!pass@cluster0-ozlsa.mongodb.net/online-shop?retryWrites=true&w=majority",
+	"jwtSecret": "my online shop app"
+}

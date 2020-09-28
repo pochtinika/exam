@@ -1,0 +1,65 @@
+$baseHue: 215;
+$baseSat: 50%;
+$baseLum: 90;
+$baseColor: hsl($baseHue, $baseSat, $baseLum);
+
+.checkbox {
+	border-radius: 10px;
+	width: 100%;
+
+	&_lowercase {
+		.checkbox__label {
+			text-transform: none;
+		}
+	}
+
+	&__label {
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+	&__dot {
+		background: linear-gradient(135deg, rgba(247, 251, 255, 0.7) 20%, rgba(0, 0, 0, 0.125) 100%);
+		border: 2px solid $baseColor;
+		border-radius: 16px;
+		box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.1), -3px -3px 5px 1px rgba(247, 251, 255, 0.5);
+		cursor: pointer;
+		height: 28px;
+		margin: 3px 0;
+		margin-right: 16px;
+		width: 28px;
+	}
+
+	input {
+		display: none;
+
+		&:checked + label {
+			background: linear-gradient(-45deg, rgba(76, 236, 183, 0.418) 20%, rgba(0, 0, 0, 0.2) 100%);
+		}
+	}
+}
+
+.checkbox.darkmode {
+	padding-left: 10px;
+	.checkbox__dot {
+		background: linear-gradient(135deg, rgba(247, 251, 255, 0.7) 20%, rgba(0, 0, 0, 0.125) 100%);
+		border: none;
+		box-shadow: 2px 2px 6px #000000, -1px -1px 5px rgba(247, 251, 255, 0.5);
+	}
+	input {
+		&:checked + label {
+			background: linear-gradient(-45deg, rgba(76, 236, 183, 0.418) 20%, rgba(0, 0, 0, 0.2) 100%);
+			box-shadow: 2px 2px 6px #000000;
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.checkbox {
+		&:hover {
+			cursor: pointer;
+			transition: 0.4s ease;
+			background-color: #e9e3e373;
+		}
+	}
+}

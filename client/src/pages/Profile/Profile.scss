@@ -1,0 +1,179 @@
+.profile {
+	transition: 0.5s ease;
+	padding-bottom: 20px;
+
+	&__avatar {
+		width: 100%;
+		max-width: 300px;
+		max-height: 300px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__edit_back {
+		position: absolute;
+		transition: 0.5s ease;
+		left: 0;
+		bottom: 0;
+		width: 30%;
+		height: 30%;
+		color: #2fdbb6;
+		font-weight: bold;
+		font-size: 1.4rem;
+		cursor: pointer;
+		z-index: 10;
+		background-color: #ecf0f3;
+		box-shadow: -5px -3px 7px #fff, 6px 3px 10px rgba($color: #000000, $alpha: 0.3);
+	}
+
+	&__edit_front {
+		box-shadow: -3px -2px 5px #fff, 5px 2px 7px rgba($color: #000000, $alpha: 0.4);
+		width: 70%;
+		height: 70%;
+
+		&:active {
+			box-shadow: inset -3px -2px 5px #fff, inset 5px 2px 7px rgba($color: #000000, $alpha: 0.4);
+			background-color: #dbdee0;
+		}
+	}
+
+	.avatar {
+		margin-bottom: 20px;
+		&__back,
+		&__front,
+		&__face,
+		&__body,
+		.profile__edit_back,
+		.profile__edit_front {
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&__back {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			box-shadow: -8px -3px 12px #fff, 6px 3px 10px rgba($color: #000000, $alpha: 0.3);
+		}
+		&__front {
+			width: 75%;
+			height: 75%;
+			box-shadow: -6px -2px 9px #fff, 5px 2px 8px rgba($color: #000000, $alpha: 0.2);
+			position: relative;
+			overflow: hidden;
+		}
+
+		&__face {
+			width: 35%;
+			height: 35%;
+			box-shadow: -6px -4px 6px #fff, 5px 4px 8px rgba($color: #000000, $alpha: 0.3);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -70%);
+			z-index: 2;
+			background-color: #2fdbb6;
+		}
+		&__body {
+			width: 70%;
+			height: 70%;
+			box-shadow: -6px -2px 9px #fff, 5px 2px 8px rgba($color: #000000, $alpha: 0.4);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, 5%);
+			z-index: 1;
+			background-color: #2fdbb6;
+		}
+	}
+
+	.info {
+		margin-bottom: 20px;
+
+		&__text {
+			font-weight: 300;
+			&_bold {
+				font-weight: bold;
+				font-size: 1.2rem;
+			}
+			&_undefined {
+				font-weight: 300;
+				font-size: 1rem;
+				color: #7c7a7a;
+			}
+		}
+	}
+
+	.settings {
+		display: flex;
+		flex-direction: column;
+
+		&__name {
+			margin-right: 20px;
+		}
+		&__block {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+.profile.darkmode {
+	.avatar {
+		&__back {
+			box-shadow: -8px -3px 12px #424242, 6px 3px 10px #000;
+		}
+		&__front {
+			box-shadow: -6px -2px 9px #424242, 5px 2px 8px #000;
+		}
+
+		&__face {
+			box-shadow: -6px -4px 6px #424242, 5px 4px 8px #000;
+
+			background-color: #2fdbb6;
+		}
+		&__body {
+			box-shadow: -6px -2px 9px #424242, 5px 2px 8px #000;
+
+			background-color: #2fdbb6;
+		}
+
+		.profile__edit_back {
+			box-shadow: -5px -3px 7px #424242, 6px 3px 10px #000;
+			background-color: #26292f;
+		}
+		.profile__edit_front {
+			box-shadow: -3px -2px 5px #424242, 5px 2px 7px #000;
+
+			&:active {
+				box-shadow: inset -3px -2px 5px #424242, inset 5px 2px 7px #000;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.profile {
+		.avatar {
+			.profile__edit_back {
+				&:hover {
+					transition: 0.4s ease;
+					box-shadow: -5px -3px 7px #fff, 6px 3px 15px rgba($color: #000000, $alpha: 0.6);
+				}
+			}
+		}
+	}
+	.profile.darkmode {
+		.avatar {
+			.profile__edit_back {
+				&:hover {
+					transition: 0.4s ease;
+					box-shadow: -8px -5px 10px #424242, 10px 7px 13px #000;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+.laptops {
+	&__display-mode {
+		justify-content: flex-end;
+		margin: 20px 0;
+	}
+
+	&__mode-icon {
+		font-size: 1.5em;
+		padding: 7px;
+		margin: 0 5px;
+		cursor: pointer;
+		box-shadow: 3px 3px 2px rgba($color: #000000, $alpha: 0.4), -2px -2px 5px #fff;
+
+		&.darkmode {
+			box-shadow: 3px 3px 2px #000, -2px -2px 5px #424242;
+		}
+		&_active.darkmode {
+			background-color: #549788;
+		}
+		&_active {
+			background-color: #2fdbb6;
+			color: #fff;
+		}
+
+		&:active {
+			box-shadow: inset 3px 3px 2px rgba($color: #000000, $alpha: 0.4);
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.laptops {
+		&__mode-icon {
+			&:hover {
+				transition: 0.4s ease;
+				background-color: #d3cfcf;
+			}
+		}
+		&__mode-icon.darkmode {
+			&:hover {
+				background-color: #424141;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.laptops {
+		&__display-mode {
+			justify-content: flex-start !important;
+			margin: 0;
+		}
+	}
+}

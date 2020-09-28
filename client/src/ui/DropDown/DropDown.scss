@@ -1,0 +1,36 @@
+.my-dropdown {
+	.btn.dropdown-toggle {
+		font-size: 0.9rem !important;
+		padding: 0.5rem 1.6rem !important;
+	}
+
+	&__menu {
+		padding: 0 !important;
+		margin: 0 !important;
+		box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.4) !important;
+	}
+	&__item.active {
+		background-color: #2fdbb6 !important;
+	}
+}
+
+.my-dropdown.darkmode {
+	.btn.dropdown-toggle {
+		font-size: 0.9rem !important;
+		padding: 0.5rem 1.6rem !important;
+		box-shadow: -4px -3px 8px #424242, 6px 3px 10px #000 !important;
+
+		&:hover {
+			color: #838080;
+		}
+	}
+	.dropdown-menu {
+		background-color: #9fa1a1 !important;
+	}
+	.dropdown-item.active {
+		background-color: #549788 !important;
+	}
+	.dropdown-item:hover {
+		background-color: #c4c4c4 !important;
+	}
+}

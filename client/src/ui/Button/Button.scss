@@ -1,0 +1,115 @@
+.mybtn {
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	padding: 15px 20px;
+	border-radius: 30px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	text-align: center;
+	background: #24cfaa;
+	box-shadow: 3px 3px 8px #b1b1b1, -5px -5px 8px #fff;
+	transition: 0.4s ease;
+	outline: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__label.label-show {
+		display: block !important;
+		font-size: 1rem !important;
+	}
+
+	&:active {
+		background: #1da88a;
+		box-shadow: inset 3px 3px 5px #585858;
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:disabled {
+		background: #a1a0a0;
+	}
+}
+
+.mybtn.secondary {
+	background: transparent;
+	color: #24cfaa;
+}
+
+.mybtn.small {
+	max-width: 250px;
+	font-size: 1.1rem;
+}
+
+.mybtn.xs {
+	max-width: 150px;
+	font-size: 1rem;
+	padding: 5px 15px;
+	width: auto;
+}
+
+.mybtn.left {
+	margin-right: auto;
+}
+.mybtn.right {
+	margin-left: auto;
+}
+.mybtn.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.mybtn.darkmode {
+	box-shadow: 3px 3px 8px #000, -5px -5px 8px #424242;
+	background: #549788;
+	&:active {
+		box-shadow: inset 3px 3px 5px #000000;
+	}
+}
+.mybtn.darkmode.secondary {
+	color: #888787;
+	border: none;
+	background: transparent;
+	&:active {
+		background: #202227;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.mybtn {
+		&:hover {
+			background: #4caa96;
+			outline: none;
+		}
+	}
+	.mybtn.secondary {
+		&:hover {
+			background: #dfe1e2;
+			color: #838080;
+		}
+	}
+	.mybtn.darkmode {
+		&:hover {
+			background: #2c5f54;
+		}
+	}
+	.mybtn.secondary.darkmode {
+		&:hover {
+			background: #3e434b;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.mybtn.xs {
+		max-width: 150px;
+		font-size: 1.3rem;
+		padding: 10px;
+		width: auto;
+		margin-right: 10px;
+	}
+}

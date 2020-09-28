@@ -1,0 +1,33 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "~bootstrap-css-only/css/bootstrap.min.css";
+@import "~mdbreact/dist/css/mdb.css";
+@import "~react-toastify/dist/ReactToastify.css";
+
+body {
+	background-color: #ecf0f3;
+}
+
+#root {
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.section_page {
+	flex-grow: 1;
+	transition: 0.5s ease;
+}
+
+.section_page.darkmode {
+	background-color: #26292f;
+	color: #e7e6e6;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.Toastify__toast-container.Toastify__toast-container--top-right {
+	top: 4em;
+}

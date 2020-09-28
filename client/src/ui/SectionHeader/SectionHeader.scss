@@ -1,0 +1,17 @@
+.section-header {
+	text-align: center;
+	margin: 15px 0;
+	font-weight: bold;
+	background-color: #202020;
+	color: transparent;
+	text-shadow: 1.1px 1.1px 0px rgba(255, 255, 255, 0.685);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	transition: 0.5s ease;
+}
+
+.section-header.darkmode {
+	background-color: #000000;
+	text-shadow: 1.1px 1.1px 0px rgba(121, 120, 120, 0.945);
+}

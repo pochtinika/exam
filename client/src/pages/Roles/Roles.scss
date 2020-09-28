@@ -1,0 +1,62 @@
+.roles {
+	&__bold {
+		margin: 0 5px;
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+	&__field {
+		display: flex;
+		align-items: center;
+		margin-top: 25px;
+		border-radius: 25px;
+		padding: 0 15px;
+		box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+		width: 100%;
+		max-width: 300px;
+	}
+
+	&__input {
+		border: none;
+		outline: none;
+		background: none;
+		font-size: 1rem;
+		color: #555;
+		padding: 15px 10px 15px 5px;
+		margin-left: 5px;
+		flex: 1;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			border: none;
+			box-shadow: 0 0 0px 1000px transparent inset;
+			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+			transition: background-color 5000s ease-in-out 0s;
+		}
+	}
+}
+
+.roles.darkmode {
+	.roles__table {
+		color: #fff;
+	}
+
+	.roles__field {
+		box-shadow: inset 8px 8px 8px #000, inset -8px -8px 8px #424242;
+	}
+
+	.roles__input {
+		color: #dbd8d8;
+
+		&:-webkit-autofill,
+		&:-webkit-autofill:hover,
+		&:-webkit-autofill:focus {
+			border: none;
+			box-shadow: 0 0 0px 1000px transparent inset;
+			-webkit-text-fill-color: #fff;
+			-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+			transition: background-color 5000s ease-in-out 0s;
+		}
+	}
+}

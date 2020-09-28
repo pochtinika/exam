@@ -1,0 +1,73 @@
+.details {
+	padding-bottom: 30px;
+
+	.mybtn {
+		background-color: #f92929;
+	}
+
+	&__slider {
+		display: block;
+		margin: 0 auto;
+		max-width: 700px;
+		height: 500px;
+
+		.carousel-item {
+			height: 100% !important;
+
+			.view {
+				height: 100% !important;
+				text-align: center;
+
+				img {
+					display: inline-block !important;
+					height: 100%;
+					max-width: 100%;
+				}
+			}
+		}
+
+		.carousel-control-next-icon {
+			width: 70px !important;
+			height: 70px !important;
+		}
+
+		.carousel-control-prev-icon {
+			width: 70px !important;
+			height: 70px !important;
+		}
+	}
+}
+
+.details.darkmode {
+	.table {
+		color: #e7e6e6;
+	}
+	.table-striped tbody tr:nth-of-type(odd) {
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.details {
+		&__slider {
+			height: 320px;
+		}
+	}
+}
+@media screen and (max-width: 480px) {
+	.details {
+		&__slider {
+			height: 250px;
+		}
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.details {
+		.mybtn {
+			&:hover {
+				background-color: #dd1f1f;
+			}
+		}
+	}
+}

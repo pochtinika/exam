@@ -1,0 +1,101 @@
+.mytoggle {
+	&__input {
+		display: none;
+
+		// add default box-sizing for this scope
+		&,
+		&:after,
+		&:before,
+		& *,
+		& *:after,
+		& *:before,
+		& + .mytoggle__label {
+			box-sizing: border-box;
+			&::selection {
+				background: none;
+			}
+		}
+
+		+ .mytoggle__label {
+			background: #ecebeb;
+			border-radius: 2em;
+			padding: 2px;
+			transition: all 0.3s ease;
+			border: 1px solid #e8eae9;
+			box-shadow: inset 1px 1px 2px rgba($color: #000000, $alpha: 0.4);
+			outline: 0;
+			display: block;
+			margin-bottom: 0;
+			width: 4em;
+			height: 2em;
+			position: relative;
+			cursor: pointer;
+			user-select: none;
+
+			&:after,
+			&:before {
+				position: relative;
+				display: block;
+				content: "";
+				width: 50%;
+				height: 100%;
+			}
+
+			&:after {
+				border-radius: 2em;
+				background: #fbfbfb;
+				transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+				box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08), inset 0px 0px 5px rgba($color: #000000, $alpha: 0.1);
+				left: 0;
+			}
+			&:hover:after {
+				will-change: padding;
+			}
+
+			&:before {
+				display: none;
+			}
+			&:active {
+				box-shadow: inset 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
+				&:after {
+					margin-right: 0.8em;
+				}
+			}
+		}
+		&:checked + .mytoggle__label {
+			background: #2fdbb6;
+			&:active {
+				box-shadow: inset 1px 1px 4px rgba($color: #000000, $alpha: 0.5);
+				&:after {
+					margin-left: -0.8em;
+				}
+			}
+		}
+
+		&:checked + .mytoggle__label:after {
+			left: 50%;
+		}
+	}
+}
+
+.mytoggle.darkmode {
+	box-shadow: 2px 2px 4px #000, -2px -2px 4px #424242;
+	border-radius: 2em;
+
+	.mytoggle__label {
+		border: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.mytoggle {
+		&__input {
+			+ .mytoggle__label {
+				transition: all 0.2s ease;
+				&:after {
+					transition: 0.2s ease, padding 0.2s ease, margin 0.2s ease;
+				}
+			}
+		}
+	}
+}
